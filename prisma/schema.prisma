@@ -1,0 +1,377 @@
+// La Bella Aesthetics — Prisma schema (PostgreSQL / Neon)
+// Conventions: UTC timestamps, money in integer cents, translated text as Json {de,en}.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------- Enums ----------
+enum Role {
+  CUSTOMER
+  STAFF
+  ADMIN
+}
+
+enum StaffRole {
+  PRACTITIONER
+  ADMIN
+  RECEPTION
+}
+
+enum Weekday {
+  MON
+  TUE
+  WED
+  THU
+  FRI
+  SAT
+  SUN
+}
+
+enum BookingStatus {
+  PENDING_PAYMENT
+  CONFIRMED
+  CANCELLED
+  COMPLETED
+  NO_SHOW
+}
+
+enum PaymentStatus {
+  REQUIRES_PAYMENT
+  SUCCEEDED
+  FAILED
+  REFUNDED
+  PARTIALLY_REFUNDED
+}
+
+enum PaymentKind {
+  DEPOSIT
+  FULL
+}
+
+enum SubscriberStatus {
+  PENDING
+  CONFIRMED
+  UNSUBSCRIBED
+}
+
+// ---------- Auth / Identity ----------
+model User {
+  id              String       @id @default(cuid())
+  email           String       @unique
+  emailVerified   DateTime?
+  passwordHash    String?
+  name            String?
+  image           String?
+  role            Role         @default(CUSTOMER)
+  preferredLocale String       @default("de")
+  accounts        Account[]
+  sessions        Session[]
+  customer        Customer?
+  staffMember     StaffMember?
+  createdAt       DateTime     @default(now())
+  updatedAt       DateTime     @updatedAt
+
+  @@index([role])
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model VerificationToken {
+  identifier String
+  token      String   @unique
+  type       String // "EMAIL_VERIFY" | "PASSWORD_RESET"
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model Customer {
+  id               String    @id @default(cuid())
+  userId           String?   @unique
+  user             User?     @relation(fields: [userId], references: [id], onDelete: SetNull)
+  firstName        String
+  lastName         String
+  email            String
+  phone            String?
+  locale           String    @default("de")
+  notes            String?
+  marketingConsent Boolean   @default(false)
+  bookings         Booking[]
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  @@index([email])
+}
+
+// ---------- Catalog ----------
+model ServiceCategory {
+  id          String    @id @default(cuid())
+  slug        String    @unique
+  name        Json
+  description Json?
+  sortOrder   Int       @default(0)
+  active      Boolean   @default(true)
+  services    Service[]
+}
+
+model Service {
+  id              String          @id @default(cuid())
+  slug            String          @unique
+  name            Json
+  description     Json?
+  durationMinutes Int
+  bufferMinutes   Int             @default(0)
+  priceCents      Int
+  depositCents    Int             @default(0)
+  currency        String          @default("EUR")
+  categoryId      String
+  category        ServiceCategory @relation(fields: [categoryId], references: [id])
+  imageUrl        String?
+  sortOrder       Int             @default(0)
+  active          Boolean         @default(true)
+  staffServices   StaffService[]
+  bookings        Booking[]
+
+  @@index([categoryId, active])
+}
+
+// ---------- Staff ----------
+model StaffMember {
+  id            String              @id @default(cuid())
+  userId        String?             @unique
+  user          User?               @relation(fields: [userId], references: [id], onDelete: SetNull)
+  firstName     String
+  lastName      String
+  role          StaffRole           @default(PRACTITIONER)
+  bio           Json?
+  photoUrl      String?
+  sortOrder     Int                 @default(0)
+  active        Boolean             @default(true)
+  staffServices StaffService[]
+  workingHours  StaffWorkingHours[]
+  timeOff       StaffTimeOff[]
+  bookings      Booking[]
+}
+
+model StaffService {
+  staffMemberId String
+  serviceId     String
+  staffMember   StaffMember @relation(fields: [staffMemberId], references: [id], onDelete: Cascade)
+  service       Service     @relation(fields: [serviceId], references: [id], onDelete: Cascade)
+
+  @@id([staffMemberId, serviceId])
+  @@index([serviceId])
+}
+
+model StaffWorkingHours {
+  id            String      @id @default(cuid())
+  staffMemberId String
+  staffMember   StaffMember @relation(fields: [staffMemberId], references: [id], onDelete: Cascade)
+  weekday       Weekday
+  startMinute   Int
+  endMinute     Int
+  effectiveFrom DateTime?   @db.Date
+  effectiveTo   DateTime?   @db.Date
+
+  @@index([staffMemberId, weekday])
+}
+
+model StaffTimeOff {
+  id            String      @id @default(cuid())
+  staffMemberId String
+  staffMember   StaffMember @relation(fields: [staffMemberId], references: [id], onDelete: Cascade)
+  startTime     DateTime    @db.Timestamptz(3)
+  endTime       DateTime    @db.Timestamptz(3)
+  reason        String?
+
+  @@index([staffMemberId, startTime, endTime])
+}
+
+// ---------- Studio config ----------
+model StudioHours {
+  id          String  @id @default(cuid())
+  weekday     Weekday @unique
+  isOpen      Boolean @default(true)
+  startMinute Int
+  endMinute   Int
+}
+
+model StudioClosure {
+  id        String   @id @default(cuid())
+  startTime DateTime @db.Timestamptz(3)
+  endTime   DateTime @db.Timestamptz(3)
+  reason    String?
+
+  @@index([startTime, endTime])
+}
+
+model BookingSettings {
+  id                    String   @id @default("default")
+  leadTimeMinutes       Int      @default(120)
+  maxAdvanceDays        Int      @default(90)
+  slotGranularityMin    Int      @default(15)
+  cancellationCutoffHrs Int      @default(24)
+  timezone              String   @default("Europe/Berlin")
+  updatedAt             DateTime @updatedAt
+}
+
+// ---------- Booking & payment ----------
+model Booking {
+  id                            String        @id @default(cuid())
+  customerId                    String
+  customer                      Customer      @relation(fields: [customerId], references: [id])
+  serviceId                     String
+  service                       Service       @relation(fields: [serviceId], references: [id])
+  staffMemberId                 String
+  staffMember                   StaffMember   @relation(fields: [staffMemberId], references: [id])
+  startTime                     DateTime      @db.Timestamptz(3)
+  endTime                       DateTime      @db.Timestamptz(3)
+  serviceEndTime                DateTime      @db.Timestamptz(3)
+  status                        BookingStatus @default(PENDING_PAYMENT)
+  priceCents                    Int
+  depositCents                  Int
+  currency                      String        @default("EUR")
+  paymentStatus                 PaymentStatus @default(REQUIRES_PAYMENT)
+  cancellationCutoffHrsSnapshot Int           @default(24)
+  notesCustomer                 String?
+  notesInternal                 String?
+  confirmedAt                   DateTime?
+  cancelledAt                   DateTime?
+  confirmationSentAt            DateTime?
+  reminderSentAt                DateTime?
+  rescheduledFromId             String?       @unique
+  rescheduledFrom               Booking?      @relation("Reschedule", fields: [rescheduledFromId], references: [id])
+  rescheduledTo                 Booking?      @relation("Reschedule")
+  payment                       Payment?
+  createdAt                     DateTime      @default(now())
+  updatedAt                     DateTime      @updatedAt
+
+  @@index([staffMemberId, startTime, endTime])
+  @@index([status, startTime])
+  @@index([customerId, startTime])
+}
+
+model Payment {
+  id             String        @id @default(cuid())
+  bookingId      String        @unique
+  booking        Booking       @relation(fields: [bookingId], references: [id])
+  stripePiId     String        @unique
+  amount         Int
+  currency       String        @default("eur")
+  kind           PaymentKind
+  status         PaymentStatus @default(REQUIRES_PAYMENT)
+  refundedAmount Int           @default(0)
+  stripeRefundId String?
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model StripeEvent {
+  id          String   @id
+  type        String
+  processedAt DateTime @default(now())
+}
+
+// ---------- Content ----------
+model BlogPost {
+  id             String    @id @default(cuid())
+  slug           String    @unique
+  title          Json
+  excerpt        Json?
+  body           Json
+  coverImage     String?
+  status         String    @default("DRAFT") // DRAFT | SCHEDULED | PUBLISHED
+  publishedAt    DateTime?
+  authorId       String?
+  seoTitle       Json?
+  seoDescription Json?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model GalleryAlbum {
+  id        String         @id @default(cuid())
+  slug      String         @unique
+  title     Json
+  serviceId String?
+  published Boolean        @default(false)
+  order     Int            @default(0)
+  images    GalleryImage[]
+}
+
+model GalleryImage {
+  id        String       @id @default(cuid())
+  albumId   String
+  album     GalleryAlbum @relation(fields: [albumId], references: [id], onDelete: Cascade)
+  beforeUrl String
+  afterUrl  String
+  caption   Json?
+  consent   Boolean      @default(false)
+  order     Int          @default(0)
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  customerId String?
+  authorName String
+  rating     Int
+  text       Json
+  status     String   @default("PENDING") // PENDING | APPROVED | REJECTED
+  featured   Boolean  @default(false)
+  reply      Json?
+  createdAt  DateTime @default(now())
+}
+
+// ---------- Newsletter ----------
+model NewsletterSubscriber {
+  id             String           @id @default(cuid())
+  email          String           @unique
+  status         SubscriberStatus @default(PENDING)
+  locale         String           @default("de")
+  confirmToken   String?          @unique
+  source         String?
+  confirmedAt    DateTime?
+  unsubscribedAt DateTime?
+  createdAt      DateTime         @default(now())
+}
+
+model Campaign {
+  id        String    @id @default(cuid())
+  subject   Json
+  content   Json
+  status    String    @default("DRAFT") // DRAFT | SENDING | SENT
+  audience  String    @default("CONFIRMED")
+  sentAt    DateTime?
+  createdAt DateTime  @default(now())
+}

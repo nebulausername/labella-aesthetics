@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "title": "La Bella Aesthetics — Premium Aesthetic Treatments in Munich",
+    "description": "Premium aesthetic and skincare treatments in Munich. Facials, PRP, laser therapy and more — personalised, medically grounded, in an elegant setting."
+  },
+  "nav": {
+    "services": "Treatments",
+    "about": "About",
+    "gallery": "Gallery",
+    "testimonials": "Reviews",
+    "contact": "Contact",
+    "book": "Book now",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "eyebrow": "Premium Aesthetics · Munich",
+    "titleLead": "Discover your",
+    "titleHighlight": "true beauty",
+    "subtitle": "Premium aesthetic treatments in Munich — tailored to you, medically grounded, and crafted with a feel for natural elegance.",
+    "ctaPrimary": "Book now",
+    "ctaSecondary": "Explore treatments"
+  },
+  "trust": {
+    "certified": "Certified specialists",
+    "medical": "Highest medical standards",
+    "clients": "2,000+ happy clients",
+    "central": "Central in Munich"
+  },
+  "services": {
+    "eyebrow": "Our Services",
+    "title": "Treatments that make you glow",
+    "subtitle": "From deep-acting facials to the latest laser technology — tailored to your skin.",
+    "cta": "View all treatments",
+    "items": {
+      "facials": {
+        "title": "Facials",
+        "description": "Tailored facial treatments for visibly clear, fresh and radiant skin."
+      },
+      "prp": {
+        "title": "PRP & Microneedling",
+        "description": "Natural regeneration using your own plasma — for firmer, youthful skin."
+      },
+      "laser": {
+        "title": "Laser Therapy",
+        "description": "Precise laser treatments for pigment spots, redness and unwanted hair."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "About La Bella",
+    "title": "Beauty begins with trust",
+    "body": "In the heart of Munich we combine medical expertise with a feel for natural aesthetics. Every treatment begins with a personal consultation — because your skin is as unique as you are.",
+    "point1": "Personal consultation & treatment plan",
+    "point2": "Certified specialists",
+    "point3": "Premium products & cutting-edge technology",
+    "cta": "More about us"
+  },
+  "testimonials": {
+    "eyebrow": "Client Reviews",
+    "title": "What our clients say",
+    "items": [
+      {
+        "quote": "I felt comfortable from the very first minute. My skin has never been so radiant.",
+        "name": "Sophia M.",
+        "treatment": "Signature Facial"
+      },
+      {
+        "quote": "Professional, warm and absolutely competent. La Bella is my new favourite place in Munich.",
+        "name": "Elena R.",
+        "treatment": "PRP Treatment"
+      },
+      {
+        "quote": "Finally a studio that listens to what I want. The result exceeds all expectations.",
+        "name": "Carolin B.",
+        "treatment": "Laser Therapy"
+      }
+    ]
+  },
+  "bookingCta": {
+    "title": "Ready to discover your true beauty?",
+    "subtitle": "Book your appointment now — we look forward to seeing you.",
+    "cta": "Book an appointment",
+    "phoneLabel": "Or give us a call",
+    "phone": "+49 89 123 456 78"
+  },
+  "faq": {
+    "eyebrow": "Frequently Asked",
+    "title": "Good to know",
+    "items": [
+      {
+        "q": "How does the first treatment work?",
+        "a": "Every treatment starts with a thorough, free consultation. Together we analyse your skin and put together a personalised plan."
+      },
+      {
+        "q": "Are the treatments painful?",
+        "a": "Most of our treatments are virtually pain-free. If needed, we use numbing creams so you feel completely at ease."
+      },
+      {
+        "q": "How many sessions do I need?",
+        "a": "That depends on the treatment and your individual goal. During the consultation you'll get an honest assessment and recommendation."
+      },
+      {
+        "q": "Can I reschedule my appointment?",
+        "a": "Of course. Appointments can be rescheduled or cancelled free of charge up to 24 hours in advance."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Premium aesthetic treatments in the heart of Munich.",
+    "colServices": "Treatments",
+    "colCompany": "Studio",
+    "colLegal": "Legal",
+    "linkAbout": "About",
+    "linkTeam": "Team",
+    "linkGallery": "Gallery",
+    "linkBlog": "Blog",
+    "linkContact": "Contact",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "addressTitle": "Visit us",
+    "address": "Maximilianstrasse 1, 80539 Munich",
+    "hoursTitle": "Opening hours",
+    "hours": "Mon–Fri 09:00–19:00 · Sat 10:00–16:00",
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "readMore": "Learn more",
+    "viewAll": "View all",
+    "from": "from",
+    "duration": "Duration",
+    "minutesShort": "min",
+    "deposit": "Deposit",
+    "ourTreatments": "Our Treatments"
+  },
+  "treatments": {
+    "metaTitle": "Treatments — La Bella Aesthetics Munich",
+    "metaDescription": "Discover our premium aesthetic treatments in Munich: Signature Facial, HydraFacial, microneedling, PRP, laser hair removal and wrinkle treatment.",
+    "eyebrow": "Our Services",
+    "title": "Treatments",
+    "subtitle": "Medically grounded, individually tailored — for visibly more beautiful skin.",
+    "benefitsTitle": "Your benefits",
+    "processTitle": "The process",
+    "faqTitle": "Frequently asked",
+    "priceFromLabel": "Price from",
+    "durationLabel": "Duration",
+    "depositLabel": "Deposit",
+    "perSession": "per session",
+    "bookCta": "Book this treatment",
+    "relatedTitle": "You might also like"
+  },
+  "aboutPage": {
+    "metaTitle": "About — La Bella Aesthetics Munich",
+    "metaDescription": "Get to know La Bella Aesthetics: medical expertise, natural aesthetics and a warm team in the heart of Munich.",
+    "eyebrow": "About La Bella",
+    "title": "Beauty begins with trust",
+    "intro": "In the heart of Munich we combine medical expertise with a fine feel for natural aesthetics.",
+    "story1": "La Bella Aesthetics was born from one conviction: real beauty comes from feeling at home in your own skin. That is why every treatment with us begins by listening and an honest, personal consultation.",
+    "story2": "Our specialists combine cutting-edge technology with premium products and the highest medical standards. The result: natural, visible results in an atmosphere where you can fully relax.",
+    "valuesTitle": "Our values",
+    "values": [
+      { "title": "Individual", "text": "No off-the-shelf standard — every treatment is tailored to you." },
+      { "title": "Medically grounded", "text": "Highest hygiene and quality standards, certified specialists." },
+      { "title": "Natural", "text": "We enhance your beauty rather than changing it." }
+    ],
+    "teamTitle": "Our team",
+    "teamSubtitle": "Experienced specialists who love their craft.",
+    "team": [
+      { "name": "Isabella Romano", "role": "Founder & Practitioner", "bio": "Over 12 years of experience in aesthetic skincare and anti-aging." },
+      { "name": "Dr. Lena Vogt", "role": "Medical Director", "bio": "Specialised in gentle, natural wrinkle treatments." },
+      { "name": "Marie Keller", "role": "Aesthetician", "bio": "Expert in facials, HydraFacial and skin analysis." }
+    ]
+  },
+  "galleryPage": {
+    "metaTitle": "Gallery — La Bella Aesthetics Munich",
+    "metaDescription": "Before-and-after impressions and a look inside our studio in Munich.",
+    "eyebrow": "Gallery",
+    "title": "Results that speak for themselves",
+    "subtitle": "A glimpse of our work and our studio.",
+    "disclaimer": "Note: For legal reasons (German HWG) we only show before-and-after images with consent and during a personal consultation on site.",
+    "comingSoon": "Gallery coming soon"
+  },
+  "contactPage": {
+    "metaTitle": "Contact — La Bella Aesthetics Munich",
+    "metaDescription": "Get in touch with La Bella Aesthetics in Munich. We look forward to your message.",
+    "eyebrow": "Contact",
+    "title": "Talk to us",
+    "subtitle": "Have a question or want to book an appointment? We are here for you.",
+    "infoTitle": "Contact details",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "email": "hello@labella-aesthetics.de",
+    "hoursLabel": "Opening hours",
+    "formTitle": "Write to us",
+    "fieldName": "Name",
+    "fieldEmail": "Email",
+    "fieldPhone": "Phone (optional)",
+    "fieldMessage": "Your message",
+    "consent": "I have read the privacy policy and consent to the processing of my data.",
+    "submit": "Send message",
+    "mapNote": "The interactive map is only loaded after your consent (privacy).",
+    "successNote": "Thank you for your message! We will get back to you as soon as possible."
+  },
+  "bookingPage": {
+    "metaTitle": "Book an appointment — La Bella Aesthetics Munich",
+    "metaDescription": "Book your appointment at La Bella Aesthetics in Munich online.",
+    "eyebrow": "Online booking",
+    "title": "Book an appointment",
+    "subtitle": "Just a few steps to your preferred appointment."
+  },
+  "cookie": {
+    "title": "We respect your privacy",
+    "message": "We use cookies to give you the best possible experience. Necessary cookies are always active — you decide on all others.",
+    "accept": "Accept all",
+    "reject": "Necessary only",
+    "privacy": "More in privacy policy"
+  },
+  "legal": {
+    "reviewNote": "Note: This text is a placeholder and must be reviewed by a lawyer before publication.",
+    "imprintTitle": "Imprint",
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms & Conditions"
+  },
+  "booking": {
+    "stepService": "Treatment",
+    "stepStaff": "Specialist",
+    "stepDate": "Appointment",
+    "stepDetails": "Your details",
+    "stepSummary": "Summary",
+    "back": "Back",
+    "next": "Continue",
+    "confirm": "Confirm booking",
+    "chooseService": "Choose your treatment",
+    "chooseStaff": "Who would you like to book with?",
+    "anyStaff": "No preference",
+    "anyStaffDesc": "First available specialist",
+    "chooseDate": "Choose date & time",
+    "timezoneNote": "All times in Munich time (CET/CEST).",
+    "noSlots": "Unfortunately there are no times available on this day.",
+    "detailsTitle": "Your contact details",
+    "fieldName": "Name",
+    "fieldEmail": "Email",
+    "fieldPhone": "Phone",
+    "fieldNote": "Note (optional)",
+    "consent": "I agree to the privacy policy and the terms & conditions.",
+    "summaryTitle": "Almost done — please review",
+    "labelService": "Treatment",
+    "labelStaff": "Specialist",
+    "labelWhen": "Appointment",
+    "labelDuration": "Duration",
+    "labelDeposit": "Deposit",
+    "successTitle": "Booking request sent!",
+    "successText": "Thank you, {name}! We have received your request and will get back to you shortly to confirm.",
+    "demoNote": "Note: This is a preview booking without real payment. Online deposit (Stripe), live availability and automatic confirmation will follow with the backend.",
+    "newBooking": "New booking",
+    "minutesShort": "min"
+  }
+}

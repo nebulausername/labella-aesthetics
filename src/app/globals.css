@@ -1,0 +1,121 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ */
+/*  La Bella Aesthetics — Design Tokens (single source of truth)       */
+/*  Dark luxury · warm near-black + champagne gold                     */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Backgrounds — warm charcoal ramp */
+  --color-bg-base: #0b0a09;
+  --color-bg-surface: #13110f;
+  --color-bg-elevated: #1c1916;
+
+  /* Gold / champagne */
+  --color-gold: #c9a24b;
+  --color-gold-bright: #e7c778;
+  --color-gold-muted: #9c7e3a;
+  --color-gold-soft: rgba(201, 162, 75, 0.12);
+  --color-champagne: #ead9b0;
+
+  /* Text */
+  --color-heading: #f6f1e7;
+  --color-body: #d6cfc4;
+  --color-muted: #9a938a;
+  --color-on-gold: #1a1714;
+
+  /* Borders / dividers */
+  --color-border-subtle: rgba(234, 217, 176, 0.08);
+  --color-border-default: rgba(234, 217, 176, 0.16);
+  --color-border-gold: rgba(201, 162, 75, 0.45);
+
+  /* Semantic */
+  --color-success: #5fa07a;
+  --color-error: #c0584f;
+  --color-info: #6e8ba6;
+  --color-focus: #e7c778;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --shadow-gold-glow: 0 0 0 1px rgba(201, 162, 75, 0.35), 0 8px 30px rgba(201, 162, 75, 0.18);
+}
+
+/* Map Tailwind font utilities onto the next/font CSS variables. */
+@theme inline {
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-inter);
+}
+
+/* ------------------------------------------------------------------ */
+/*  Base layer                                                         */
+/* ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+}
+
+/* Tailwind v4 borders default to currentColor — use our hairline instead. */
+*,
+*::before,
+*::after {
+  border-color: var(--color-border-subtle);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset anchor targets for the sticky header. */
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-body);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  color: var(--color-heading);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-on-gold);
+}
+
+/* Reusable eyebrow label (gold, tracked uppercase). */
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

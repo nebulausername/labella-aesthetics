@@ -1,0 +1,260 @@
+{
+  "metadata": {
+    "title": "La Bella Aesthetics — Premium Ästhetik-Behandlungen in München",
+    "description": "Premium Ästhetik- und Kosmetikbehandlungen in München. Facials, PRP, Laser-Therapie und mehr — individuell, medizinisch fundiert, in eleganter Atmosphäre."
+  },
+  "nav": {
+    "services": "Behandlungen",
+    "about": "Über uns",
+    "gallery": "Galerie",
+    "testimonials": "Bewertungen",
+    "contact": "Kontakt",
+    "book": "Termin buchen",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen"
+  },
+  "hero": {
+    "eyebrow": "Premium Ästhetik · München",
+    "titleLead": "Entdecke deine",
+    "titleHighlight": "wahre Schönheit",
+    "subtitle": "Premium Ästhetik-Behandlungen in München — individuell auf dich abgestimmt, medizinisch fundiert und mit einem Gespür für natürliche Eleganz.",
+    "ctaPrimary": "Jetzt buchen",
+    "ctaSecondary": "Behandlungen entdecken"
+  },
+  "trust": {
+    "certified": "Zertifizierte Spezialistinnen",
+    "medical": "Höchste medizinische Standards",
+    "clients": "2.000+ zufriedene Kundinnen",
+    "central": "Zentral in München"
+  },
+  "services": {
+    "eyebrow": "Unsere Dienstleistungen",
+    "title": "Behandlungen, die strahlen lassen",
+    "subtitle": "Von tiefenwirksamen Facials bis zu modernster Laser-Technologie — abgestimmt auf deine Haut.",
+    "cta": "Alle Behandlungen ansehen",
+    "items": {
+      "facials": {
+        "title": "Facials",
+        "description": "Maßgeschneiderte Gesichtsbehandlungen für sichtbar reine, frische und strahlende Haut."
+      },
+      "prp": {
+        "title": "PRP & Microneedling",
+        "description": "Natürliche Regeneration mit körpereigenem Plasma — für festere, jugendliche Haut."
+      },
+      "laser": {
+        "title": "Laser-Therapie",
+        "description": "Präzise Laserbehandlungen gegen Pigmentflecken, Rötungen und unerwünschte Härchen."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Über La Bella",
+    "title": "Schönheit beginnt mit Vertrauen",
+    "body": "Im Herzen Münchens verbinden wir medizinische Expertise mit einem Gespür für natürliche Ästhetik. Jede Behandlung beginnt mit einer persönlichen Beratung — denn deine Haut ist so einzigartig wie du.",
+    "point1": "Individuelle Beratung & Behandlungsplan",
+    "point2": "Zertifizierte Spezialistinnen",
+    "point3": "Premium-Produkte & modernste Technik",
+    "cta": "Mehr über uns"
+  },
+  "testimonials": {
+    "eyebrow": "Kundenbewertungen",
+    "title": "Was unsere Kundinnen sagen",
+    "items": [
+      {
+        "quote": "Ich habe mich von der ersten Minute an wohlgefühlt. Meine Haut war noch nie so strahlend.",
+        "name": "Sophia M.",
+        "treatment": "Signature Facial"
+      },
+      {
+        "quote": "Professionell, herzlich und absolut kompetent. La Bella ist mein neuer Lieblingsort in München.",
+        "name": "Elena R.",
+        "treatment": "PRP-Behandlung"
+      },
+      {
+        "quote": "Endlich ein Studio, das auf meine Wünsche eingeht. Das Ergebnis übertrifft alle Erwartungen.",
+        "name": "Carolin B.",
+        "treatment": "Laser-Therapie"
+      }
+    ]
+  },
+  "bookingCta": {
+    "title": "Bereit, deine wahre Schönheit zu entdecken?",
+    "subtitle": "Vereinbare jetzt deinen Termin — wir freuen uns auf dich.",
+    "cta": "Jetzt Termin buchen",
+    "phoneLabel": "Oder ruf uns an",
+    "phone": "+49 89 123 456 78"
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Gut zu wissen",
+    "items": [
+      {
+        "q": "Wie läuft die erste Behandlung ab?",
+        "a": "Jede Behandlung startet mit einer ausführlichen, kostenlosen Beratung. Gemeinsam analysieren wir deine Haut und stellen einen individuellen Plan zusammen."
+      },
+      {
+        "q": "Sind die Behandlungen schmerzhaft?",
+        "a": "Die meisten unserer Behandlungen sind nahezu schmerzfrei. Bei Bedarf setzen wir betäubende Cremes ein, damit du dich rundum wohlfühlst."
+      },
+      {
+        "q": "Wie viele Sitzungen brauche ich?",
+        "a": "Das hängt von der Behandlung und deinem individuellen Ziel ab. Bei der Beratung erhältst du eine ehrliche Einschätzung und Empfehlung."
+      },
+      {
+        "q": "Kann ich meinen Termin verschieben?",
+        "a": "Selbstverständlich. Termine können bis 24 Stunden vorher kostenfrei verschoben oder storniert werden."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Premium Ästhetik-Behandlungen im Herzen Münchens.",
+    "colServices": "Behandlungen",
+    "colCompany": "Studio",
+    "colLegal": "Rechtliches",
+    "linkAbout": "Über uns",
+    "linkTeam": "Team",
+    "linkGallery": "Galerie",
+    "linkBlog": "Blog",
+    "linkContact": "Kontakt",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "addressTitle": "Besuche uns",
+    "address": "Maximilianstraße 1, 80539 München",
+    "hoursTitle": "Öffnungszeiten",
+    "hours": "Mo–Fr 09:00–19:00 · Sa 10:00–16:00",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "common": {
+    "readMore": "Mehr erfahren",
+    "viewAll": "Alle ansehen",
+    "from": "ab",
+    "duration": "Dauer",
+    "minutesShort": "Min.",
+    "deposit": "Anzahlung",
+    "ourTreatments": "Unsere Behandlungen"
+  },
+  "treatments": {
+    "metaTitle": "Behandlungen — La Bella Aesthetics München",
+    "metaDescription": "Entdecke unsere Premium-Ästhetikbehandlungen in München: Signature Facial, HydraFacial, Microneedling, PRP, Laser-Haarentfernung und Faltenbehandlung.",
+    "eyebrow": "Unsere Dienstleistungen",
+    "title": "Behandlungen",
+    "subtitle": "Medizinisch fundiert, individuell abgestimmt — für sichtbar schönere Haut.",
+    "benefitsTitle": "Deine Vorteile",
+    "processTitle": "Der Ablauf",
+    "faqTitle": "Häufige Fragen",
+    "priceFromLabel": "Preis ab",
+    "durationLabel": "Dauer",
+    "depositLabel": "Anzahlung",
+    "perSession": "pro Sitzung",
+    "bookCta": "Diese Behandlung buchen",
+    "relatedTitle": "Das könnte dich auch interessieren"
+  },
+  "aboutPage": {
+    "metaTitle": "Über uns — La Bella Aesthetics München",
+    "metaDescription": "Lerne La Bella Aesthetics kennen: medizinische Expertise, natürliche Ästhetik und ein herzliches Team im Herzen Münchens.",
+    "eyebrow": "Über La Bella",
+    "title": "Schönheit beginnt mit Vertrauen",
+    "intro": "Im Herzen Münchens verbinden wir medizinische Expertise mit einem feinen Gespür für natürliche Ästhetik.",
+    "story1": "La Bella Aesthetics wurde aus einer Überzeugung geboren: Echte Schönheit entsteht, wenn du dich in deiner Haut wohlfühlst. Deshalb beginnt bei uns jede Behandlung mit Zuhören und einer ehrlichen, individuellen Beratung.",
+    "story2": "Unsere Spezialistinnen kombinieren modernste Technik mit Premium-Produkten und höchsten medizinischen Standards. Das Ergebnis: natürliche, sichtbare Resultate in einer Atmosphäre, in der du dich rundum entspannen kannst.",
+    "valuesTitle": "Unsere Werte",
+    "values": [
+      { "title": "Individuell", "text": "Kein Standard von der Stange — jede Behandlung wird auf dich abgestimmt." },
+      { "title": "Medizinisch fundiert", "text": "Höchste Hygiene- und Qualitätsstandards, zertifizierte Spezialistinnen." },
+      { "title": "Natürlich", "text": "Wir betonen deine Schönheit, statt sie zu verändern." }
+    ],
+    "teamTitle": "Unser Team",
+    "teamSubtitle": "Erfahrene Spezialistinnen, die ihr Handwerk lieben.",
+    "team": [
+      { "name": "Isabella Romano", "role": "Gründerin & Heilpraktikerin", "bio": "Über 12 Jahre Erfahrung in ästhetischer Hautpflege und Anti-Aging." },
+      { "name": "Dr. Lena Vogt", "role": "Ärztliche Leitung", "bio": "Spezialisiert auf sanfte, natürliche Faltenbehandlungen." },
+      { "name": "Marie Keller", "role": "Kosmetikerin", "bio": "Expertin für Facials, HydraFacial und Hautanalyse." }
+    ]
+  },
+  "galleryPage": {
+    "metaTitle": "Galerie — La Bella Aesthetics München",
+    "metaDescription": "Vorher-Nachher-Eindrücke und Einblicke in unser Studio in München.",
+    "eyebrow": "Galerie",
+    "title": "Ergebnisse, die für sich sprechen",
+    "subtitle": "Ein Einblick in unsere Arbeit und unser Studio.",
+    "disclaimer": "Hinweis: Aus rechtlichen Gründen (HWG) zeigen wir Vorher-Nachher-Bilder ausschließlich mit Einwilligung und im persönlichen Beratungsgespräch vor Ort.",
+    "comingSoon": "Galerie wird in Kürze ergänzt"
+  },
+  "contactPage": {
+    "metaTitle": "Kontakt — La Bella Aesthetics München",
+    "metaDescription": "Kontaktiere La Bella Aesthetics in München. Wir freuen uns auf deine Nachricht.",
+    "eyebrow": "Kontakt",
+    "title": "Sprich mit uns",
+    "subtitle": "Du hast Fragen oder möchtest einen Termin vereinbaren? Wir sind für dich da.",
+    "infoTitle": "Kontaktdaten",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Telefon",
+    "emailLabel": "E-Mail",
+    "email": "hallo@labella-aesthetics.de",
+    "hoursLabel": "Öffnungszeiten",
+    "formTitle": "Schreib uns",
+    "fieldName": "Name",
+    "fieldEmail": "E-Mail",
+    "fieldPhone": "Telefon (optional)",
+    "fieldMessage": "Deine Nachricht",
+    "consent": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "submit": "Nachricht senden",
+    "mapNote": "Die interaktive Karte wird erst nach deiner Zustimmung geladen (Datenschutz).",
+    "successNote": "Danke für deine Nachricht! Wir melden uns schnellstmöglich bei dir."
+  },
+  "bookingPage": {
+    "metaTitle": "Termin buchen — La Bella Aesthetics München",
+    "metaDescription": "Buche online deinen Termin bei La Bella Aesthetics in München.",
+    "eyebrow": "Online-Buchung",
+    "title": "Termin buchen",
+    "subtitle": "In wenigen Schritten zu deinem Wunschtermin."
+  },
+  "cookie": {
+    "title": "Wir respektieren deine Privatsphäre",
+    "message": "Wir verwenden Cookies, um unsere Website bestmöglich zu gestalten. Notwendige Cookies sind immer aktiv — über alle weiteren entscheidest du.",
+    "accept": "Alle akzeptieren",
+    "reject": "Nur notwendige",
+    "privacy": "Mehr im Datenschutz"
+  },
+  "legal": {
+    "reviewNote": "Hinweis: Dieser Text ist ein Platzhalter und muss vor Veröffentlichung juristisch geprüft werden.",
+    "imprintTitle": "Impressum",
+    "privacyTitle": "Datenschutzerklärung",
+    "termsTitle": "Allgemeine Geschäftsbedingungen"
+  },
+  "booking": {
+    "stepService": "Behandlung",
+    "stepStaff": "Spezialist:in",
+    "stepDate": "Termin",
+    "stepDetails": "Deine Daten",
+    "stepSummary": "Übersicht",
+    "back": "Zurück",
+    "next": "Weiter",
+    "confirm": "Verbindlich buchen",
+    "chooseService": "Wähle deine Behandlung",
+    "chooseStaff": "Bei wem möchtest du buchen?",
+    "anyStaff": "Keine Präferenz",
+    "anyStaffDesc": "Erste:r verfügbare:r Spezialist:in",
+    "chooseDate": "Wähle Datum & Uhrzeit",
+    "timezoneNote": "Alle Zeiten in Münchner Zeit (MEZ/MESZ).",
+    "noSlots": "An diesem Tag sind leider keine Zeiten frei.",
+    "detailsTitle": "Deine Kontaktdaten",
+    "fieldName": "Name",
+    "fieldEmail": "E-Mail",
+    "fieldPhone": "Telefon",
+    "fieldNote": "Anmerkung (optional)",
+    "consent": "Ich stimme der Datenschutzerklärung und den AGB zu.",
+    "summaryTitle": "Fast geschafft — bitte prüfen",
+    "labelService": "Behandlung",
+    "labelStaff": "Spezialist:in",
+    "labelWhen": "Termin",
+    "labelDuration": "Dauer",
+    "labelDeposit": "Anzahlung",
+    "successTitle": "Buchungsanfrage gesendet!",
+    "successText": "Vielen Dank, {name}! Wir haben deine Anfrage erhalten und melden uns kurzfristig zur Bestätigung.",
+    "demoNote": "Hinweis: Dies ist eine Vorschau-Buchung ohne echte Zahlung. Online-Anzahlung (Stripe), Live-Verfügbarkeit und automatische Bestätigung folgen mit dem Backend.",
+    "newBooking": "Neue Buchung",
+    "minutesShort": "Min."
+  }
+}
